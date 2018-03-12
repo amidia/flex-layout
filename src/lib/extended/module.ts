@@ -6,12 +6,7 @@
  * found in the LICENSE file at https://angular.io/license
  */
 import {NgModule} from '@angular/core';
-import {
-  BROWSER_PROVIDER,
-  CoreModule,
-  StylesheetMap,
-  StyleUtils
-} from '@angular/flex-layout/core';
+import {CoreModule} from '@angular/flex-layout/core';
 
 import {ImgSrcDirective} from './img-src/img-src';
 import {ClassDirective} from './class/class';
@@ -35,12 +30,7 @@ const ALL_DIRECTIVES = [
 @NgModule({
   imports: [CoreModule],
   declarations: [...ALL_DIRECTIVES],
-  exports: [...ALL_DIRECTIVES],
-  providers: [
-    StylesheetMap,
-    StyleUtils,
-    BROWSER_PROVIDER,
-  ]
+  exports: [...ALL_DIRECTIVES]
 })
 export class ExtendedModule {
 }
